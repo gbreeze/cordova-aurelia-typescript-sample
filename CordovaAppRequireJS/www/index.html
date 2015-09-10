@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <title>CordovaAppRequireJS</title>
+
+    <!-- CordovaAppRequireJS references -->
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+<body aurelia-app="scripts/appBundle">
+    <p>Hello, your application is ready!</p>
+
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script type="text/javascript" src="scripts/appBundle.js"></script>
+    <script type="text/javascript" data-main="scripts/config" src="scripts/require.js"></script>
+</body>
+</html>
