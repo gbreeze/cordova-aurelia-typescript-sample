@@ -17,7 +17,7 @@ module Application {
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
 
 
-        require(["script/aurelia/aurelia-bundle-latest"], function (au) {
+        require(["aurelia/aurelia-bundle-latest"], function (au) {
             require(["aurelia-bundle-manifest"], function (abm) {
                 require(["aurelia-bootstrapper"], function (b) {
                 });
@@ -43,22 +43,21 @@ module Application {
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
     }
+
+
+    //************************************
+    // TODO: Where to put?
+    //************************************
+    export function configure(aurelia) {
+        aurelia.use
+            .standardConfiguration()
+            .developmentLogging();
+
+        aurelia.start().then(a => a.setRoot('views/welcome'));
+    }
+    //TODO:END ************************************
 }
 
 window.onload = function () {
     Application.initialize();
 }
-
-
-//************************************
-// TODO: Where to put?
-//************************************
-export function configure(aurelia) {
-    aurelia.use
-        .standardConfiguration()
-        .developmentLogging();
-
-    console.log("aurelia.start()");
-    aurelia.start().then(a => a.setRoot('views/welcome'));
-}
-    //TODO:END ************************************
