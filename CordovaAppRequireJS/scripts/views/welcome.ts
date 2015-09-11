@@ -1,5 +1,3 @@
-///<amd-dependency path="./welcome" />
-
 import {computedFrom} from 'aurelia-framework';
 
 export class Welcome {

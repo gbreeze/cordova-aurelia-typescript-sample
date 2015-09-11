@@ -1,15 +1,4 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
-    switch (arguments.length) {
-        case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
-        case 3: return decorators.reduceRight(function(o, d) { return (d && d(target, key)), void 0; }, void 0);
-        case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
-    }
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-define(["require", "exports", 'aurelia-framework'], function (require, exports, aurelia_framework_1) {
+define(["require", "exports"], function (require, exports) {
     var Welcome = (function () {
         function Welcome() {
             this.heading = 'Welcome to the Aurelia Navigation App!';
@@ -20,6 +9,7 @@ define(["require", "exports", 'aurelia-framework'], function (require, exports, 
             //Getters can't be observed with Object.observe, so they must be dirty checked.
             //However, if you tell Aurelia the dependencies, it no longer needs to dirty check the property.
             //To optimize by declaring the properties that this getter is computed from, uncomment the line below.
+            //@computedFrom('firstName', 'lastName')
             get: function () {
                 return this.firstName + " " + this.lastName;
             },
@@ -29,11 +19,6 @@ define(["require", "exports", 'aurelia-framework'], function (require, exports, 
         Welcome.prototype.welcome = function () {
             alert("Welcome, " + this.fullName + "!");
         };
-        Object.defineProperty(Welcome.prototype, "fullName",
-            __decorate([
-                aurelia_framework_1.computedFrom('firstName', 'lastName'), 
-                __metadata('design:type', Object)
-            ], Welcome.prototype, "fullName", Object.getOwnPropertyDescriptor(Welcome.prototype, "fullName")));
         return Welcome;
     })();
     exports.Welcome = Welcome;
