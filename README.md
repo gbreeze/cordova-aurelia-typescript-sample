@@ -1,0 +1,1 @@
+# cordova-aurelia-typescript-sample
