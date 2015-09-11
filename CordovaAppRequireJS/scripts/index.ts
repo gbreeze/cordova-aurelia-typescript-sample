@@ -49,6 +49,8 @@ module Application {
     // TODO: Where to put?
     //************************************
     export function configure(aurelia) {
+        console.log("executing aurelia config");
+
         aurelia.use
             .standardConfiguration()
             .developmentLogging();
