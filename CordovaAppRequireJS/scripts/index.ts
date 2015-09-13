@@ -41,21 +41,6 @@ module Application {
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
     }
-
-
-    //************************************
-    // TODO: Where to put?
-    //************************************
-    export function configure(aurelia) {
-        console.log("executing aurelia config");
-
-        aurelia.use
-            .standardConfiguration()
-            .developmentLogging();
-
-        aurelia.start().then(a => a.setRoot('views/welcome'));
-    }
-    //TODO:END ************************************
 }
 
 window.onload = function () {
