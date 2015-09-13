@@ -12,7 +12,8 @@ require.config({
         aurelia: baseUrl + "/scripts/aurelia",
         webcomponentsjs: baseUrl + "/scripts/webcomponentsjs",
         views: baseUrl + "/views",
-        underscore: baseUrl + "/scripts/underscore/underscore.min"
+        underscore: baseUrl + "/scripts/underscore/underscore.min",
+        appBundle:baseUrl + "/scripts/appBundle"
     },
     shim: {
         underscore: {
