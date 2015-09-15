@@ -1,6 +1,10 @@
 import {computedFrom} from 'aurelia-framework';
+import {Router} from 'aurelia-router';
+
 
 export class Welcome {
+    router: Router;
+
     heading = 'Welcome to the Aurelia Navigation App!';
     firstName = 'John';
     lastName = 'Doe';
@@ -19,7 +23,16 @@ export class Welcome {
 
     goToWinJs() {
         console.log('go to winjs');
-        WinJS.Navigation.navigate("views/winJSTest.html");
+        //WinJS.Navigation.navigate("views/winJSTest.html");
+
+
+        "http://aurelia.io/docs.html#generating-route-urls"
+       
+        let url = this.router.generate('winJSTest', { id: 123 });
+        this.router.navigateToRoute('winJSTest');
+
+
+
     }
 }
 

@@ -1,5 +1,22 @@
 ﻿<template>
     <h1>WinJS Controls</h1>
 
+    <!-- Create AppBar -->
+    <!-- BEGINTEMPLATE: Template code for an AppBar -->
+    <div id="createAppBar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement:'bottom'}">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdAdd',label:'Add',icon:'add',tooltip:'Add item',section:'primary',type:'flyout',flyout:select('#addFlyout'),onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRemove',label:'Remove',icon:'remove',tooltip:'Remove item',section:'primary',onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdEdit',label:'Edit',icon:'edit',tooltip:'Edit item',section:'primary',onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdCamera',label:'Camera',icon:'camera',tooltip:'Take a picture',section:'primary',onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdSettings',label:'Settings',icon:'settings',tooltip:'Settings',section:'primary',onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdShare',label:'Share',icon:'reshare',tooltip:'Share',section:'primary',onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdPrint',label:'Print',section:'secondary',onclick:Sample.outputCommand}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdNetwork',label:'Network',section:'secondary',onclick:Sample.outputCommand}"></button>
+    </div>
+    <!-- ENDTEMPLATE -->
 
+    <div id="addFlyout" data-win-control="WinJS.UI.Flyout">
+        <div>This flyout was invoked after clicking on 'Add' command.</div>
+    </div>
+    <div class="status"></div>
 </template>

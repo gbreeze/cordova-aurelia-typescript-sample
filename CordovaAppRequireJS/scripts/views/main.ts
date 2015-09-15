@@ -3,5 +3,5 @@
         .standardConfiguration()
         .developmentLogging();
 
-    aurelia.start().then(a => a.setRoot('views/welcome'));
+    aurelia.start().then(a => a.setRoot('views/app'));
 }
