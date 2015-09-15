@@ -29,7 +29,7 @@ module.exports = function (grunt) {
 			// https://github.com/gruntjs/grunt-contrib-copy
 			viewsJS: {
 				expand: true,
-				src: 'scripts/views/*.js*',
+				src: 'scripts/viewModels/*.js*',
 				dest: 'www/views/',
 				flatten: true,
 				filter: 'isFile',
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
 	// grunt.registerTask("build", ["webpack:build"]);
 
 
-	//grunt.loadNpmTasks("grunt-bower-task");
+	grunt.loadNpmTasks("grunt-bower-task");
 	grunt.loadNpmTasks('grunt-contrib-copy');
 //	grunt.loadNpmTasks("grunt-ts");
 };

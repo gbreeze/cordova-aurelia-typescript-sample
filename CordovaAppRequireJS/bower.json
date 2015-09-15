@@ -1,5 +1,22 @@
 {
-    "name": "CordovaAppRequireJS",
-    "dependencies": {
+  "name": "CordovaAppRequireJS",
+  "dependencies": {
+    "winjs": "^4.3.0",
+    "requirejs": "^2.1.20"
+  },
+  "exportsOverride": {
+    "bootstrap": {
+      "js": "dist/js/*.*",
+      "css": "dist/css/*.*",
+      "fonts": "dist/fonts/*.*"
+    },
+    "jquery": {
+      "": "dist/*.*"
+    },
+    "winjs": {
+      "js": [ "js/base.*", "js/ui.*" ],
+      "css": "css/*.*",
+      "fonts": "fonts/*.*"
     }
+  }
 }

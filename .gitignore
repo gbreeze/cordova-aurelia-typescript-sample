@@ -214,3 +214,4 @@ CordovaAppRequireJS/www/scripts/appBundle.*
 CordovaAppRequireJS/scripts/**/*.js
 CordovaAppRequireJS/scripts/**/*js.map
 CordovaAppRequireJS/www/views/*.js*
+CordovaAppRequireJS/bower_components/*

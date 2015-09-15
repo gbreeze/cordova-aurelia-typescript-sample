@@ -1,6 +1,5 @@
 ﻿/// <reference path="../typings/winjs/winjs.d.ts" />
 
-
 export class WinJSTest {
 
     heading = 'WinJS Hello!';
@@ -9,26 +8,7 @@ export class WinJSTest {
         console.log("WinJSTest.constructor()");
     }
 
-    activate(params, routeConfig, navigationInstruction) {
-        console.log("WinJSTest.activate()");
-    }
-
-    winjs() {
-        //   alert("winjs");
-
-        // WinJS.Navigation.navigate("winJSTest.html");
-
-    }
-
-    appBarLoad() {
-        console.log("WinJSTest.appBarLoad()");
-
-
-    }
-
-    attached() {
-        console.log("WinJSTest.attached()");
-
+    processUI() {
         WinJS.Namespace.define("Sample", {
             outputCommand: WinJS.UI.eventHandler(function (ev) {
                 var status = document.querySelector(".status");
@@ -43,5 +23,18 @@ export class WinJSTest {
         });
 
         WinJS.UI.processAll();
+    }
+
+    activate(params, routeConfig, navigationInstruction) {
+        console.log("WinJSTest.activate()");
+    }
+
+    attached() {
+        console.log("WinJSTest.attached()");
+        this.processUI();
+    }
+
+    created(view) {
+        console.log("WinJSTest.created(view)");
     }
 }

@@ -11,19 +11,18 @@
     <title>CordovaAppRequireJS</title>
 
     <!-- CordovaAppRequireJS references -->
-    <link href="css/ui-light.css" rel="stylesheet" />
+    <link href="lib/winjs/css/ui-light.min.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
-
 </head>
 <body aurelia-app="views/main">
     <p>Hello, your application is ready!</p>
 
     <script type="text/javascript" src="cordova.js"></script>
 
-    <script src="scripts/winjs/base.min.js"></script>
-    <script src="scripts/winjs/ui.min.js"></script>
+    <script src="lib/winjs/js/base.min.js"></script>
+    <script src="lib/winjs/js/ui.min.js"></script>
 
     <script type="text/javascript" src="scripts/appBundle.js"></script>
-    <script type="text/javascript" data-main="scripts/config" src="scripts/requirejs/require.js"></script>
+    <script type="text/javascript" data-main="scripts/config" src="lib/requirejs/require.js"></script>
 </body>
 </html>
