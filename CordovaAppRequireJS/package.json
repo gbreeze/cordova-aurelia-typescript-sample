@@ -1,6 +1,12 @@
 {
     "name": "CordovaAppRequireJS",
     "version": "1.0.0",
-    "dependencies": {
-    }
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-bower-task": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-webpack": "^1.0.11",
+    "grunt-ts": "*",
+    "grunt-contrib-copy": "^0.8.1"
+  }
 }

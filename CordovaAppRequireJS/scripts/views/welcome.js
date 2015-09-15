@@ -26,6 +26,10 @@ define(["require", "exports", 'aurelia-framework'], function (require, exports, 
         Welcome.prototype.welcome = function () {
             alert("Welcome, " + this.fullName + "!");
         };
+        Welcome.prototype.goToWinJs = function () {
+            console.log('go to winjs');
+            WinJS.Navigation.navigate("views/winJSTest.html");
+        };
         Object.defineProperty(Welcome.prototype, "fullName",
             __decorate([
                 aurelia_framework_1.computedFrom('firstName', 'lastName')

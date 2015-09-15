@@ -16,6 +16,11 @@ export class Welcome {
     welcome() {
         alert(`Welcome, ${this.fullName}!`);
     }
+
+    goToWinJs() {
+        console.log('go to winjs');
+        WinJS.Navigation.navigate("views/winJSTest.html");
+    }
 }
 
 export class UpperValueConverter {
