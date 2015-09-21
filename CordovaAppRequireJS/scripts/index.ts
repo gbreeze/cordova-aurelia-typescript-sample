@@ -14,6 +14,8 @@ module Application {
 
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
 
+        console.log("Cordova has been loaded");
+
 
         require(["aurelia/aurelia-bundle-latest"], function (au) {
             require(["aurelia-bundle-manifest"], function (abm) {

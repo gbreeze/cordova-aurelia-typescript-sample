@@ -1,6 +1,4 @@
-﻿Application.initialize();
-
-var origin = window.location.origin;
+﻿var origin = window.location.origin;
 var pathname = window.location.pathname;
 var baseUrl = origin + pathname.toLowerCase().replace("index.html", "");
 
