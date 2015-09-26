@@ -1,7 +1,6 @@
 import {computedFrom} from 'aurelia-framework';
 import {Router} from 'aurelia-router';
 
-
 export class Welcome {
     router: Router;
 
@@ -23,16 +22,15 @@ export class Welcome {
 
     goToWinJs() {
         console.log('go to winjs');
-        //WinJS.Navigation.navigate("views/winJSTest.html");
-
 
         "http://aurelia.io/docs.html#generating-route-urls"
        
-        let url = this.router.generate('winJSTest', { id: 123 });
+        // ERROR: router is undefined :(
+        // WHY?
+        // let url = this.router.generate('winJSTest', { id: 123 });
+
+        // ERROR: router is undefined :(
         this.router.navigateToRoute('winJSTest');
-
-
-
     }
 }
 
